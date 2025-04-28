@@ -44,33 +44,22 @@ Developed by: Sabeeha Shaik
 RegisterNumber:  212223230176
 */
 ```
-
-## Output:
 ```
 import pandas as pd
 df=pd.read_csv('Placement_Data.csv')
 df.head()
 ```
-![image](https://github.com/user-attachments/assets/8f39864c-6a96-4e84-9685-02d45a6f91de)
-
 ```
 d1=df.copy()
 d1=d1.drop(["sl_no","salary"],axis=1)
 d1.head()
 ```
-
-![image](https://github.com/user-attachments/assets/f4014dc5-709e-49a9-8f51-70b79b183ae2)
-
 ```
 d1.isnull().sum()
 ```
-![image](https://github.com/user-attachments/assets/7a08c4fd-fd1d-4337-96dd-929e9d19d7f7)
-
 ```
 d1.duplicated().sum()
 ```
-![image](https://github.com/user-attachments/assets/5117141f-5935-405f-b4e8-212918684637)
-
 ```
 from sklearn.preprocessing import LabelEncoder
 le=LabelEncoder()
@@ -84,20 +73,14 @@ d1["specialisation"]=le.fit_transform(d1["specialisation"])
 d1["status"]=le.fit_transform(d1["status"])
 d1
 ```
-![image](https://github.com/user-attachments/assets/c893eddb-3d5e-415a-b114-1bea73a1620d)
-
 ```
 x=d1.iloc[:, : -1]
 x
 ```
-![image](https://github.com/user-attachments/assets/12e98d4c-f7ca-4790-bed7-f488e4620679)
-
 ```
 y=d1["status"]
 y
 ```
-
-![image](https://github.com/user-attachments/assets/cfe4f2eb-204b-4b25-8c3d-8b01f93d2d4d)
 ```
 from sklearn.model_selection import train_test_split
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.4,random_state=45)
@@ -107,19 +90,15 @@ model.fit(x_train,y_train)
 y_pred=model.predict(x_test)
 y_pred
 ```
-
-![image](https://github.com/user-attachments/assets/4a446cb6-bf8c-457e-ad9b-bd5182e157c2)
 ```
 from sklearn.metrics import accuracy_score,confusion_matrix,classification_report
 accuracy=accuracy_score(y_test,y_pred)
 accuracy
 ```
-![image](https://github.com/user-attachments/assets/6cf7030a-e268-4df3-9e70-59afb70ed0e1)
 ```
 confusion=confusion_matrix(y_test,y_pred)
 confusion
 ```
-![image](https://github.com/user-attachments/assets/2cfaf0d2-9116-45aa-aa7f-0bb27f253290)
 ```
 from sklearn.metrics import classification_report
 classification_report=classification_report(y_test,y_pred)
@@ -128,9 +107,36 @@ print(classification_report)
 print("Sabeeha Shaik")
 print(212223230176)
 ```
-![image](https://github.com/user-attachments/assets/89df9b8b-b24a-4dfe-b207-f5a05127f6e1)
+## Output:
+## data.head()
+![image](https://github.com/user-attachments/assets/318c781a-735f-4d3e-b91d-d988e813e1b6)
 
+## data1.head()
+![image](https://github.com/user-attachments/assets/f1dcf64b-1bd5-49b7-97a0-c33ef471f897)
 
+## isnull()
+![image](https://github.com/user-attachments/assets/8415e44c-7161-4821-9492-17779cefebe0)
+
+## duplicated()
+![image](https://github.com/user-attachments/assets/21083706-9610-41d6-85de-37a39232bd02)
+
+## data1
+![image](https://github.com/user-attachments/assets/807edf14-d8cf-4b4b-a5bb-39e54cd5c3e7)
+
+## X
+![image](https://github.com/user-attachments/assets/eaf43efa-be27-4763-993b-9cc66d778ef9)
+
+## y
+![image](https://github.com/user-attachments/assets/9bda52a1-094f-4bd7-9cee-b7d8e218c3b1)
+
+## y_pred
+![image](https://github.com/user-attachments/assets/fce17131-757c-434f-a2e4-b885d515ad63)
+
+## confusion matrix
+![image](https://github.com/user-attachments/assets/3b245a8a-3820-4c46-9947-959466b2d1e8)
+
+## classification report
+![image](https://github.com/user-attachments/assets/282485ca-a147-45ed-94b0-7aec07a30baf)
 
 ## Result:
 Thus the program to implement the the Logistic Regression Model to Predict the Placement Status of Student is written and verified using python programming.
