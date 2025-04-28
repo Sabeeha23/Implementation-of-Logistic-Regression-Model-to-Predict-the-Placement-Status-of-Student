@@ -8,17 +8,33 @@ To write a program to implement the the Logistic Regression Model to Predict the
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-Step 1. Start
+1.Load the Dataset
 
-Step 2. Load the California Housing dataset and select the first 3 features as input (X) and target variables (Y) (including the target price and another feature).
+2.Create a Copy of the Original Data
 
-Step 3. Split the data into training and testing sets, then scale (standardize) both the input features and target variables.
+3.Drop Irrelevant Columns (sl_no, salary)
 
-Step 4. Train a multi-output regression model using Stochastic Gradient Descent (SGD) on the training data.
+4.Check for Missing Values
 
-Step 5. Make predictions on the test data, inverse transform the predictions, calculate the Mean Squared Error, and print the results.
+5.Check for Duplicate Rows
 
-Step 6. Stop
+6.Encode Categorical Features using Label Encoding
+
+7.Split Data into Features (X) and Target (y)
+
+8.Split Data into Training and Testing Sets
+
+9.Initialize and Train Logistic Regression Model
+
+10.Make Predictions on Test Set
+
+11.Evaluate Model using Accuracy Score
+
+12.Generate and Display Confusion Matrix
+
+13.Generate and Display Classification Report
+
+14.Make Prediction on a New Sample Input
 
 ## Program:
 ```
@@ -108,8 +124,11 @@ confusion
 from sklearn.metrics import classification_report
 classification_report=classification_report(y_test,y_pred)
 print(classification_report)
+
+print("Sabeeha Shaik")
+print(212223230176)
 ```
-![image](https://github.com/user-attachments/assets/f5ca2376-c970-4b99-9f05-fdaed8d4a391)
+![image](https://github.com/user-attachments/assets/89df9b8b-b24a-4dfe-b207-f5a05127f6e1)
 
 
 
